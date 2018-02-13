@@ -84,12 +84,12 @@
 	static timeval s_Time0;
 	static void TimerBegin()
 	{
-		gettimeofday(&s_Time0, NULL);
+		gettimeofday(&s_Time0, nullptr);
 	}
 	static float TimerEnd()
 	{
 		timeval ttt1;
-		gettimeofday( &ttt1, NULL );
+		gettimeofday( &ttt1, nullptr );
 		timeval ttt2;
 		timersub( &ttt1, &s_Time0, &ttt2 );
 		float timeTaken = ttt2.tv_sec + ttt2.tv_usec * 1.0e-6f;
